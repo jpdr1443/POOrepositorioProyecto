@@ -6,9 +6,11 @@ public class Formulario extends JPanel {
     private  JLabel labelNombre, labelApellido, labelND, labelTipoDoc;
     private TextField campoNombre, campoApellido, campoND;
     private JComboBox tipoDocumento;
+    private  JButton btnAgregar, btnModificar, btnEliminar;
 
     public Formulario(){
         setLayout(null);
+        setBounds(0,20,450,350);;
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
         labelTipoDoc = new JLabel("Tipo de documento:");
         labelTipoDoc.setBounds(10, 20, 120, 40);
@@ -25,6 +27,12 @@ public class Formulario extends JPanel {
         campoApellido.setBounds(70,150,80, 20);
         campoND = new TextField(20);
         campoND.setBounds(150, 70, 80, 20);
+        btnAgregar = new JButton("Agregar");
+        btnAgregar.setBounds(20,260,90,30);
+        btnModificar = new JButton("Modificar");
+        btnModificar.setBounds(130,260,90,30);
+        btnEliminar = new JButton("Eliminar");
+        btnEliminar.setBounds(240,260,90,30);
 
 
         //Lista de tipos de documento
@@ -39,7 +47,9 @@ public class Formulario extends JPanel {
         add(campoApellido);
         add(campoND);
         add(tipoDocumento);
-
+        add(btnAgregar);
+        add(btnModificar);
+        add(btnEliminar);
 
     }
 
