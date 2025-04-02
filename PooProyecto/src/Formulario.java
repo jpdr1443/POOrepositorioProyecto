@@ -4,11 +4,12 @@ import java.awt.*;
 
 public class Formulario extends JPanel {
     private  JLabel labelNombre, labelApellido, labelND, labelTipoDoc;
-    private TextField campoNombre, campoApellido, campoND;
+    private JTextField campoNombre, campoApellido, campoND;
     private JComboBox tipoDocumento;
     private  JButton btnAgregar, btnModificar, btnEliminar;
 
     public Formulario(){
+        setName("Form");
         setLayout(null);
         setBounds(0,20,450,350);;
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -21,11 +22,11 @@ public class Formulario extends JPanel {
         labelApellido = new JLabel("Apellido:");
         labelApellido.setBounds(10,140,50, 40);
         //textFields y sus ajustes.
-        campoNombre = new TextField(20);
+        campoNombre = new JTextField(20);
         campoNombre.setBounds(70, 106,80,20);
-        campoApellido = new TextField(20);
+        campoApellido = new JTextField(20);
         campoApellido.setBounds(70,150,80, 20);
-        campoND = new TextField(20);
+        campoND = new JTextField(20);
         campoND.setBounds(150, 70, 80, 20);
         btnAgregar = new JButton("Agregar");
         btnAgregar.setBounds(20,260,90,30);
@@ -53,19 +54,19 @@ public class Formulario extends JPanel {
 
     }
 
-    public TextField getCampoApellido() {
+    public JTextField getCampoApellido() {
         return campoApellido;
     }
 
-    public void setCampoApellido(TextField campoApellido) {
+    public void setCampoApellido(JTextField campoApellido) {
         this.campoApellido = campoApellido;
     }
 
-    public TextField getCampoNombre() {
+    public JTextField getCampoNombre() {
         return campoNombre;
     }
 
-    public void setCampoNombre(TextField campoNombre) {
+    public void setCampoNombre(JTextField campoNombre) {
         this.campoNombre = campoNombre;
     }
 
@@ -77,11 +78,11 @@ public class Formulario extends JPanel {
         this.tipoDocumento = tipoDocumento;
     }
 
-    public TextField getCampoND() {
+    public JTextField getCampoND() {
         return campoND;
     }
 
-    public void setCampoND(TextField campoND) {
+    public void setCampoND(JTextField campoND) {
         this.campoND = campoND;
     }
 }

@@ -13,6 +13,7 @@ public class Tabla extends JPanel {
         String[] columnas = {"Numero de documento", "Nombre", "Apellido"};
         DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
         tabla = new JTable(modelo);
+        tabla.setShowHorizontalLines(true);
         JScrollPane scrollPanel = new JScrollPane(tabla);
 
         add(scrollPanel, BorderLayout.CENTER);
